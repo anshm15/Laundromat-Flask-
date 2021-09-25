@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section id="hero" class="commonbanner">
+        <div class="container">
+            <div class="row">
+              <div class="title w-100">
+                <h3>ORDER</h3>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="order-form">
+        <div class="container">
+          <div class="row">
+            <div class="section-title w-100">
+              <h2>ORDER NOW</h2>
+              <p>Please give us your details. It will just take a few minutes. Fields which are really important are shown here. Or WhatsApp your name, email id, address and time to : <span style="color: black;">8800692411</span></p><br><br>
+              <p class="mb-5">We hope that you and your loved ones are safe and sound in these times. We at DCCLUB are taking absolute precautions to deliver your items disinfected & germ free. Plz click here to understand how we are operating in these times.</p>
+          </div>
+          <div class="row form-content">
+            <div class="col-lg-6 col-md-12 col-sm-12 leftwrapper">
+              <div class="instructions">
+                <div class="instruction-head mb-5">
+                  <h4>Read Carefully</h4>
+                </div>
+                <div class="instruction-points">
+                  <p>
+                    1. Minimum Order is Rs.299. You must go through full price list <br>
+                    2- Pickup and Delivery are absolutely FREE <br>
+                    3- Currently available in Gurugram, Haryana only <br>
+                    4- Please fill up the active Mobile No., Email id and the address <br>
+                    5- Landmark is Optional but will be of great help to find your address <br>
+                    6- Rider will carry pickup bags and an electronic weighing machine to weigh your clothes <br>
+                    7- Please make sure you are available in the selected time slot <br>
+                    8- If our rider reaches at your doorstep and customer denies, then Rs. 100 will be charged as convenience fee <br>
+                    9- Cash, GooglePay, PhonePe, PayTM are accepted <br>
+                    10- By placing the order with us, you are agreeing to our Terms of Service and Privacy Policy And Offer’s T&C. <br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+              <div class="frm mt-5 ml-5">
+                <form action="/order" method="POST">
+                  <div class="form-group">
+                    <div class="productAttributeRow productAttributeConfigurableEntryNumbersOnlyText">
+                      <div class="productAttributeLabel">
+                          <label>
+                              <span style="display: none;" class="name">
+                                  Hidden:   
+                              </span>
+                          </label>
+                      </div>
+                      <div style="display: none;" class="productAttributeValue">
+                          <input type="text" class="Field validation" name="orderid" id="orderid" size="5"  />
+                      </div>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Your Name</label>
+                    <input type="text" class="form-control" id="name" value="{{ account['name'] }}" name="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Mobile Number</label>
+                    <input type="text" class="form-control" id="phone" value="{{ account['phone'] }}" name="phone">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Your Email</label>
+                    <input type="text" class="form-control" id="email" value="{{ account['email'] }}" name="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Service Type</label>
+                    <select class="form-control" id="service" name="services">
+                      <option>Select a Service</option>
+                      <option>Laundry</option>
+                      <option>Dry Cleaning</option>
+                      <option>Carpet Cleaning</option>
+                      <option>Steam Iron</option>
+                      <option>Shoes Cleaning</option>
+                      <option>Alteration & Repairs</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Select Date</label>
+                    <input type="date" class="form-control" id="date" name="date">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Select Time Slot</label>
+                    <select class="form-control" id="timeslot" name="timeslot">
+                      <option>Select Time Slot</option>
+                      <option>7AM-9AM</option>
+                      <option>9AM-11AM</option>
+                      <option>11AM-1PM</option>
+                      <option>1PM-3PM</option>
+                      <option>3PM-5PM</option>
+                      <option>5PM-7PM</option>
+                      <option>7PM-9PM</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Address</label>
+                    <textarea class="form-control" id="address" name="address" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Landmark</label>
+                    <input type="text" class="form-control" id="landmark" name="landmark">
+                  </div>                                   
+                  <div class="form-group">
+                    <input type="hidden" name="status" id="status" value="Pending">
+                  </div>
+
+                  <div class="sendBtn">
+                    <button type="submit" value="order">Place Order</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          </div>        
+        </div>
+    </section>
+    <script>
+      $(function(){
+        var randomnumber=Math.floor(Math.random()*111111)    
+        $('.productAttributeConfigurableEntryNumbersOnlyText .productAttributeValue input[type="text"]').val( randomnumber);      
+     
+     })
+    </script>
+
+    {% endblock %}

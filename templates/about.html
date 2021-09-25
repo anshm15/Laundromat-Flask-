@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section id="hero" class="commonbanner">
+        <div class="container">
+            <div class="row">
+              <div class="title w-100">
+                <h3>About US</h3>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- About Section -->
+     <section class="about">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12 p-3 pt-4 leftwrapper">
+                  <div class="aboutcontent mt-4">
+                      <h3>LAUNDROMAT : LAUNDRY AND DRY CLEANING SERVICES</h3>
+                      <p>We are professionals in the laundry and dry cleaning business, which means we always stay up to date on the latest technologies, cleaning methods, and solutions for dealing with stains or delicate fabrics.</p>
+                      <p class="mb-5 pb-4">Plus, we maintain the highest standards of business integrity by following local and national regulations and environmental safety rules. We are passionate about changing the way you think about laundry!</p>
+                      <a href="/about">READ MORE</a>
+                  </div>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 p-3 pt-4 rightwrapper">
+                <div class="aboutimg">
+                    <img src="{{url_for('static', filename='asset/img/about.png')}}" alt="aboutImg">
+                </div>
+            </div>
+          </div>
+      </div>
+  </section>
+  <!-- End Of About Section -->
+
+
+   <!-- Why us Section -->
+   <section class="whyus overlay">
+    <div class="container">
+        <div class="row">
+            <div class="section-title w-100">
+                <h2>WHY PEOPLE CHOOSE US</h2>
+            </div>
+            <div class="wrapper">
+              <div class="carousel owl-carousel">
+                 <div class="card card-1">
+                    <i class="fas fa-tags"></i>
+                    <h6 class="m-3">Affordable Price</h6>
+                    <p>Rugby and Stratford-upon-Avon. Additionally, there are many things to see and do in and around Coventry.</p>
+                 </div>
+                 <div class="card card-2">
+                     <i class="fas fa-bolt"></i>
+                    <h6 class="m-3">Expert Cleaners</h6>
+                    <p>We use the best in class products, to assure that your favorite clothes are always there for you to wear.</p>
+                 </div>
+                 <div class="card card-3">
+                     <i class="fas fa-book-reader"></i>
+                    <h6 class="m-3">Convenience</h6>
+                    <p>With just a tap of a button, your laundry gets done, giving you leisure time to spend with family and friends.</p>
+                 </div>
+                 <div class="card card-4">
+                     <i class="fas fa-clipboard-list"></i>
+                    <h6 class="m-3">Instant Order Update</h6>
+                    <p>Regular updates of your order, to help you keep a track of your laundry andplan according.</p>
+                 </div>
+                 <div class="card card-5">
+                     <i class="fas fa-tshirt"></i>
+                    <h6 class="m-3">Personalised Exprience</h6>
+                    <p>We take utmost care of your clothes, the laundry is done according to the cloth type and the nature of stains.</p>
+                 </div>
+                 <div class="card card-6">
+                     <i class="fas fa-truck"></i>
+                    <h6 class="m-3">Express Delivery</h6>
+                    <p>Forgot to wash your clothes for meetings. With our express delivery get laundry done within 8 hours.</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+    </div>
+</section>
+<!-- End of Why us Section -->
+
+
+ <!-- Help Section -->
+ <section class="help overlay-help">
+  <div class="container">
+      <div class="row">
+          <div class="section-title w-100">
+              <h2>NEED MORE <span style="color: #000;">HELP ?</span></h2>
+          </div>
+          <div class="wrapper">
+            <div class="carousel owl-carousel">
+               <div class="card card-1">
+                 <div class="top d-flex justify-content-center mb-4">
+                   <i class="fas fa-clock"></i>
+                   <h6 class="mb-0">Trading Hours</h6>
+                 </div>
+                  <p>Monday - Friday : 8:00 am to 2:00pm <br>Saturday : 9:00 am to 6:00pm <br>Sunday : Close</p>
+               </div>
+               <div class="card card-2">
+                 <div class="top d-flex justify-content-center mb-4">
+                   <i class="fas fa-phone"></i>
+                   <h6 class="mb-0">Call Us</h6>
+                 </div>
+                  <p>Any time during business hours if you want to get your clothes cleaned,quickly <br><span class="call" style="color: #29abe2;">(458) 447 247 11</span></p>
+               </div>
+               <div class="card card-3">
+                 <div class="top d-flex justify-content-center mb-4">
+                   <i class="fas fa-truck-moving"></i>
+                   <h6 class="mb-0">Delivery</h6>
+                 </div>
+                  <p>Customers don't have to worry about going to laundromat, buy detergent and kill time waiting to finish.</p>
+               </div>
+               <div class="card card-4">
+                 <div class="top d-flex justify-content-center mb-4">
+                   <i class="fab fa-telegram-plane"></i>
+                   <h6 class="mb-0">Subscribe</h6>
+                 </div>
+                  <p>If you want receive our all weekly updates about new offers and discount, signup below <br><span>Newsletter</span></p>
+               </div>
+               <div class="card card-5">
+                 <div class="top d-flex justify-content-center mb-4">
+                   <i class="fas fa-question-circle"></i>
+                   <h6 class="mb-0">FAQs</h6>
+                 </div>
+                  <p>See answers to questionson how to get our services. <br><a href="#">FAQ</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+  </div>
+</section>
+<!-- End of Help Section -->
+
+
+ <!-- Pricetable Section -->
+ <section class="pricetable">
+  <div class="container">
+    <div class="row">
+      <div class="section-title w-100">
+        <h2>CHOOSE YOUR PRICING PLAN</h2>
+    </div>
+    <div class="col-lg-4 col-md-6 mobileGrid">
+      <div class="single-pricing">
+        <div class="head-text">
+          <h3>Monthy Wash</h3>
+        </div>
+        <div class="price-area">
+          $11 <span class="duration">Per Use</span>
+        </div>
+        <div class="btn-area">
+          <a href="">GET STARTED</a>
+        </div>
+        <div class="feature-area">
+          <ul>
+            <li><i class="fas fa-check"></i>Detergent Include</li>
+            <li><i class="fas fa-check"></i>Dryer Sheets Include</li>
+            <li><i class="fas fa-check"></i>Fabric Softener Included</li>
+            <li><i class="fas fa-check"></i>Unlimited Use</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mobileGrid">
+      <div class="single-pricing best-deal">
+        <div class="label-area">
+          <span>Popular</span>
+        </div>
+        <div class="head-text">
+          <h3>Six-Month Wash</h3>
+        </div>
+        <div class="price-area">
+          $11 <span class="duration">Per Use</span>
+        </div>
+        <div class="btn-area">
+          <a href="">GET STARTED</a>
+        </div>
+        <div class="feature-area">
+          <ul>
+            <li><i class="fas fa-check"></i>Detergent Include</li>
+            <li><i class="fas fa-check"></i>Dryer Sheets Include</li>
+            <li><i class="fas fa-check"></i>Fabric Softener Included</li>
+            <li><i class="fas fa-check"></i>Unlimited Use</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mobileGrid">
+      <div class="single-pricing">
+        <div class="head-text">
+          <h3>Yearly Wash</h3>
+        </div>
+        <div class="price-area">
+          $11 <span class="duration">Per Use</span>
+        </div>
+        <div class="btn-area">
+          <a href="">GET STARTED</a>
+        </div>
+        <div class="feature-area">
+          <ul>
+            <li><i class="fas fa-check"></i>Detergent Include</li>
+            <li><i class="fas fa-check"></i>Dryer Sheets Include</li>
+            <li><i class="fas fa-check"></i>Fabric Softener Included</li>
+            <li><i class="fas fa-check"></i>Unlimited Use</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<!-- End of Pricetable Section -->
+
+
+
+
+
+<!-- Get Started Today Section -->
+<section class="starttoday">
+  <div class="container">
+    <div class="row">
+      <div class="getstartContent d-lg-flex d-md-block w-100">
+      <div class="get-started w-100">
+        <h2>GET STARTED TODAY</h2>
+        <p>New student special! $30 unlimited Gym for the first week anh 50% of our member!</p>
+    </div>
+    <div class="enroll-btn">
+      <a href="/order">BOOK NOW</a>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+<!-- End of Get Started Today Section -->
+
+
+{% endblock %}

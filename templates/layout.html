@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <!-- Font CSS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='asset/css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ef50cecf52.js" crossorigin="anonymous"></script>
+    <title>Laundromat</title>
+  </head>
+  <body>
+    <header>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/"><img src="{{url_for('static', filename='asset/img/laundromatlogo.png')}}" alt=""></a>
+                <!-- <a class="navbar-brand d-none d-lg-block" href="#"><img src="mobilelogo.png" alt=""></a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              {% if session['id']%}              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-lg-auto">
+                    <div class="profile d-lg-none d-block" onclick="menuToggle();">
+                      <img src="{{url_for('static', filename='asset/img/profile.jpg')}}" alt="">
+                  </div>
+                    <li class="nav-item">
+                      <a class="nav-link d-lg-none d-block" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-lg-none d-block" href="/inbox">Inbox</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/faq">Faq</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link d-lg-none d-block" href="{{url_for('logout')}}">Logout</a>
+                    </li>
+                    <div class="action d-lg-block d-none">
+                      <div class="profile" onclick="menuToggle();">
+                          <img src="{{url_for('static', filename='asset/img/profile.jpg')}}" alt="">
+                      </div>
+                      <div class="menu">
+                          <h3>{{ account['name'] }}<br><span></span></h3>
+                          <ul>
+                              <li><i class="fas fa-user"></i><a href="{{url_for('profile')}}">My Profile</a></li>
+                              <li><i class="fas fa-envelope"></i><a href="{{url_for('inbox')}}">Inbox</a></li>
+                              <li><i class="fas fa-question-circle"></i><a href="">Help</a></li>
+                              <li><i class="fas fa-sign-out-alt"></i><a href="{{url_for('logout')}}">Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  </ul>                
+                </div>
+                {%else%}
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-lg-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/faq">Faq</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                <li class="nav-item">
+                  <a class="nav-link loginbtn" href="{{url_for('login')}}">Login</a>
+                </li>
+                {%endif%}
+              </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+    {% block body %}   {% endblock %}
+
+
+
+
+
+
+
+     <!-- Footer -->
+ <footer class="footer-section overlay-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-logo">
+            <div class="f-logo">
+              <a href="#"><img src="{{url_for('static', filename='asset/img/laundromatlogo.png')}}" width="250" alt=""></a>
+            </div>
+            <p>We maintain the highest standards of business integruty by following and national regulations and environmental safety rules.</p>
+              <div class="social-links">
+                <h6>Follow us</h6>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                  <a href="#"><i class="fa fa-google-plus"></i></a>
+                  <a href="#"><i class="fa fa-linkedin"></i></a>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer-widget">
+            <h5>Quick Links</h5>
+            <div class="footer-links">
+              <ul>
+                <li><a href="/about">About </a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/contact">Contact </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="footer-widget">
+            <h5>Services</h5>
+            <div class="laundry-programs">
+              <ul>
+                <li><a href="#">Dry Cleaning</a></li>
+                <li><a href="#">Repars</a></li>
+                <li><a href="#">Ironing</a></li>
+                <li><a href="#">Alteration</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 offset-lg-1">
+          <div class="footer-widget">
+            <h5>Get Info</h5>
+            <div class="footer-info">
+              <ul class="footer-info">
+                <li>
+                <i class="fa fa-phone"></i>
+                <span>Phone:</span>
+                (12) 345 6789
+                </li>
+                <li>
+                <i class="fa fa-envelope-o"></i>
+                <span>Email:</span>
+                Colorlib.info@gmail.com
+                </li>
+                <li>
+                <i class="fa fa-map-marker"></i>
+                <span>Address</span>
+                Iris Watson, Box 283 8562, NY
+                </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="ct-inside">
+            Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">AHM Creation</a>
+             </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Of Footer -->
+  
+      <!-- Optional JavaScript -->
+      <script>// carousel //
+      
+        $(".carousel").owlCarousel({
+            margin: 20,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+              0:{
+                items:1,
+                nav: false
+              },
+              600:{
+                items:2,
+                nav: false
+              },
+              1000:{
+                items:3,
+                nav: false
+              }
+            }
+          });
+    
+          // carousel //
+      
+      
+      
+      
+      
+      // Testimonial //
+      //   all ------------------
+      function initParadoxWay() {
+        "use strict";
+       
+        if ($(".testimonials-carousel").length > 0) {
+            var j2 = new Swiper(".testimonials-carousel .swiper-container", {
+                preloadImages: false,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: true,
+                grabCursor: true,
+                mousewheel: false,
+                centeredSlides: true,
+                pagination: {
+                    el: '.tc-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: '.listing-carousel-button-next',
+                    prevEl: '.listing-carousel-button-prev',
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                    },
+                    
+                }
+            });
+        }
+        
+      // bubbles -----------------
+        
+        
+        setInterval(function () {
+            var size = randomValue(sArray);
+            $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+            $('.individual-bubble').animate({
+                'bottom': '100%',
+                'opacity': '-=0.7'
+            }, 5000, function () {
+                $(this).remove()
+            });
+        }, 3500);
+        
+      }
+      
+      //   Init All ------------------
+      $(document).ready(function () {
+        initParadoxWay();
+      });
+    
+        // Testimonial //</script>
+        <script>
+          function menuToggle(){
+              const toggleMenu = document.querySelector('.menu');
+              toggleMenu.classList.toggle('active')            
+          }
+      </script>
+
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    </body>
+  </html>

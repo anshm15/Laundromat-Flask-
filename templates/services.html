@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section id="hero" class="commonbanner">
+        <div class="container">
+            <div class="row">
+              <div class="title w-100">
+                <h3>Services</h3>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="service overlay-service">
+        <div class="container">
+            <div class="services-content w-100">
+            <div class="nav flex-column nav-pills w-50" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="true">Laundry Services</a>
+                <a class="nav-link" id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="false">Dry Cleaning Services</a>
+                <a class="nav-link" id="v-pills-carpet-tab" data-toggle="pill" href="#v-pills-carpet" role="tab" aria-controls="v-pills-carpet" aria-selected="false">Carpet Cleaning</a>
+                <a class="nav-link" id="v-pills-repairs-tab" data-toggle="pill" href="#v-pills-repairs" role="tab" aria-controls="v-pills-repairs" aria-selected="false">Alterations & Repairs</a>
+                <a class="nav-link" id="v-pills-iron-tab" data-toggle="pill" href="#v-pills-iron" role="tab" aria-controls="v-pills-iron" aria-selected="false">Steam Iron</a>
+                <a class="nav-link" id="v-pills-shoe-tab" data-toggle="pill" href="#v-pills-shoe" role="tab" aria-controls="v-pills-shoe" aria-selected="false">Shoes Cleaning</a>
+              </div>
+              <div class="tab-content ml-5" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-laundry" role="tabpanel" aria-labelledby="v-pills-laundry-tab">
+                    <div class="laundry-service">
+                        <div class="laundry-img">
+                            <img src="{{url_for('static', filename='asset/img/img07.jpg')}}" alt="">
+                        </div>
+                        <div class="laundry-content ml-5">
+                            <h4>Laundry Services</h4>
+                            <p>Laundry's Wash and Fold, also called Fluff and Fold, or simply Drop Off Laundry, is the perfect solution to your laundry needs as a busy parent, professional, senior citizen or student. Use drop off laundry and free more of your time and energy to work, play, or just relax. Let wash, dry, and fold your clothes for you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-dryclean" role="tabpanel" aria-labelledby="v-pills-dryclean-tab">
+                    <div class="laundry-service">
+                        <div class="laundry-img">
+                            <img src="{{url_for('static', filename='asset/img/img08.jpg')}}" alt="">
+                        </div>
+                        <div class="laundry-content ml-5">
+                            <h4>Dry Cleaning Services</h4>
+                            <p>Laundry's Wash and Fold, also called Fluff and Fold, or simply Drop Off Laundry, is the perfect solution to your laundry needs as a busy parent, professional, senior citizen or student. Use drop off laundry and free more of your time and energy to work, play, or just relax. Let wash, dry, and fold your clothes for you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-carpet" role="tabpanel" aria-labelledby="v-pills-carpet-tab">
+                    <div class="laundry-service">
+                        <div class="laundry-img">
+                            <img src="{{url_for('static', filename='asset/img/img13.jpg')}}" alt="">
+                        </div>
+                        <div class="laundry-content ml-5">
+                            <h4>Carpet Cleaning</h4>
+                            <p>Laundry's Wash and Fold, also called Fluff and Fold, or simply Drop Off Laundry, is the perfect solution to your laundry needs as a busy parent, professional, senior citizen or student. Use drop off laundry and free more of your time and energy to work, play, or just relax. Let wash, dry, and fold your clothes for you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-repairs" role="tabpanel" aria-labelledby="v-pills-repairs-tab">
+                    <div class="laundry-service">
+                        <div class="laundry-img">
+                            <img src="{{url_for('static', filename='asset/img/img10.jpg')}}" alt="">
+                        </div>
+                        <div class="laundry-content ml-5">
+                            <h4>Alterations & Repairs</h4>
+                            <p>Laundry's Wash and Fold, also called Fluff and Fold, or simply Drop Off Laundry, is the perfect solution to your laundry needs as a busy parent, professional, senior citizen or student. Use drop off laundry and free more of your time and energy to work, play, or just relax. Let wash, dry, and fold your clothes for you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-iron" role="tabpanel" aria-labelledby="v-pills-iron-tab">
+                    <div class="laundry-service">
+                        <div class="laundry-img">
+                            <img src="{{url_for('static', filename='asset/img/img11.jpg')}}" alt="">
+                        </div>
+                        <div class="laundry-content ml-5">
+                            <h4>Steam Iron</h4>
+                            <p>Laundry's Wash and Fold, also called Fluff and Fold, or simply Drop Off Laundry, is the perfect solution to your laundry needs as a busy parent, professional, senior citizen or student. Use drop off laundry and free more of your time and energy to work, play, or just relax. Let wash, dry, and fold your clothes for you!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-shoe" role="tabpanel" aria-labelledby="v-pills-shoe-tab">
+                    <div class="laundry-service">
+                        <div class="laundry-img">
+                            <img src="{{url_for('static', filename='asset/img/img12.jpg')}}" alt="">
+                        </div>
+                        <div class="laundry-content ml-5">
+                            <h4>Shoes Cleaning</h4>
+                            <p>Laundry's Wash and Fold, also called Fluff and Fold, or simply Drop Off Laundry, is the perfect solution to your laundry needs as a busy parent, professional, senior citizen or student. Use drop off laundry and free more of your time and energy to work, play, or just relax. Let wash, dry, and fold your clothes for you!</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- laundromat works section -->
+    <section class="work">
+      <div class="container">
+        <div class="row">
+          <div class="section-title w-100">
+            <h2>HOW <span style="color: #000;">LAUNDROMAT</span> WORKS</h2>
+        </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 working column mt-5">
+            <div class="single-working-content">
+              <div class="iconbox">
+                <i class="fas fa-shopping-basket"></i>
+              </div>
+              <h3>Bag Up</h3>
+              <div class="count-text d-flex justify-content-center">
+                <span>1</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 working column mt-5">
+            <div class="single-working-content">
+              <div class="iconbox">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h3>We Pick Up</h3>
+              <div class="count-text d-flex justify-content-center">
+                <span>2</span></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 working column mt-5">
+            <div class="single-working-content">
+              <div class="iconbox">
+                <i class="fas fa-tshirt"></i>
+              </div>
+              <h3>We Clean</h3>
+              <div class="count-text d-flex justify-content-center">
+                <span>3</span></div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12 working column mt-5">
+            <div class="single-working-content">
+              <div class="iconbox">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h3>Free delivery</h3>
+              <div class="count-text d-flex justify-content-center">
+                <span>4</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- laundromat works section -->
+
+
+    {% endblock %}
